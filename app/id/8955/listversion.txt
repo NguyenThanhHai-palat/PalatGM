@@ -1,0 +1,2 @@
+1.2.0.0@https://www.dropbox.com/scl/fi/fjhn2wbfn3wtqymzzoapt/Palat-MusicPlayerAudio-Install1200.zip?rlkey=w7waklj703alfmkchblxbjzmm&st=1zh88saw&dl=1
+TEST-07@http://dev.palat.io.vn/app/id/8955/1007MusicPlayerAudio.exe
