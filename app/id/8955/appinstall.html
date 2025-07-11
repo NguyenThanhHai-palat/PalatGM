@@ -5,8 +5,16 @@
 <body>
 <p id="demo"></p>
 <script>
+const value = window.location.href;
+
+if(value=="https://dev.palat.io.vn/app/id/8955/appinstall.html?1.2.0.0"){
+	document.getElementById("demo").innerHTML = 
+"Đây là bản đầu tiên của Palat Music Player Audio nếu có xảy ra lỗi trong quá trình sử dụng xin hãy báo về contact@palat.io.vn - Cảm ơn bạn <br> Phiên bản này gồm có:<p>Tải nhạc từ Youtube, Xếp nhạc, Chia sẻ nhạc,..</p>"
+}
+else if(value=="https://dev.palat.io.vn/app/id/8955/appinstall.html?(Test)1.0.6.0"){
 document.getElementById("demo").innerHTML = 
-"The full URL of this page is:<br>" + window.location.href;
+"Đây là thử nghiệm bản đầu tiên của Palat Music Player Audio.</p>"
+}
 </script>
 
 </body>
