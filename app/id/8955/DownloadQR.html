@@ -7,21 +7,18 @@
   <style>
     body {
       font-family: Arial;
-      background: #222;
-      color: white;
+      background: #1e1e1e;
+      color: #fff;
       text-align: center;
       padding: 20px;
     }
     #reader {
-      width: 300px;
+      width: 320px;
       margin: auto;
-    }
-    #result {
-      margin-top: 20px;
     }
     a.download-link {
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 20px;
       padding: 10px 16px;
       background: #579a62;
       color: white;
@@ -32,22 +29,44 @@
 </head>
 <body>
 
+  <h2>📥 Quét mã QR để tải file nhạc</h2>
   <div id="reader"></div>
-  <div id="result">
-    <p id="qr-result">Đang chờ quét mã QR...</p>
-  </div>
+  <div id="result"><p id="qr-result">Đang chờ mã QR...</p></div>
 
   <script>
+    function decodeBase64(str) {
+      try {
+        return decodeURIComponent(escape(atob(str)));
+      } catch (e) {
+        return null;
+      }
+    }
+
     function onScanSuccess(decodedText, decodedResult) {
       if (!decodedText.startsWith("https://dnc-svc.palat.io.vn/music-get/")) {
-        document.getElementById("qr-result").innerText = "QR không hợp lệ.";
+        document.getElementById("qr-result").innerText = "QR không hợp lệ!";
         return;
       }
+
+      // Lấy phần Base64 sau dấu /
+      const base64Part = decodedText.split("/").pop();
+      const decodedFileName = decodeBase64(base64Part);
+
+      if (!decodedFileName) {
+        document.getElementById("qr-result").innerText = "Không thể giải mã tên file!";
+        return;
+      }
+
+      const finalUrl = `https://dnc-svc.palat.io.vn/music-get/${base64Part}`;
+
       document.getElementById("qr-result").innerHTML = `
-        Đã xử lý xong!<br>
-        <a class="download-link" href="${decodedText}" download>Tải về</a>
+        <p>🎵 Tên file: <strong>${decodedFileName}</strong></p>
+        <a class="download-link" href="${finalUrl}" download="${decodedFileName}">
+          Tải về ngay
+        </a>
       `;
-      html5QrcodeScanner.clear();
+
+      html5QrcodeScanner.clear(); // Ngừng quét sau khi xong
     }
 
     const html5QrcodeScanner = new Html5QrcodeScanner(
