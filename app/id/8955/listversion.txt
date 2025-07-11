@@ -1,2 +1,2 @@
-1.2.0.0@hhttps://www.dropbox.com/scl/fi/7mit8hqvvdm0mu1fnxkt1/Release1200.zip?rlkey=qcssgj04qnuma99sc3eij259x&st=jkh7sluk&dl=1
+1.2.0.0@https://www.dropbox.com/scl/fi/7mit8hqvvdm0mu1fnxkt1/Release1200.zip?rlkey=qcssgj04qnuma99sc3eij259x&st=jkh7sluk&dl=1
 (Test)1.0.6.0@https://www.dropbox.com/scl/fi/edysk9o6v1qq81uyumk1o/TESTMusicPlayerAudio.zip?rlkey=iwljcojsn5hmtycwqkl6z04e2&st=8iqpxhb1&dl=1
