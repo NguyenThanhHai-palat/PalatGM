@@ -1,22 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thông tin Phiên bản</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .version-container {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .version-title {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .version-number {
+      font-size: 32px;
+      color: #579a62;
+      font-weight: bold;
+    }
+    .note {
+      margin-top: 10px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-<p id="demo">Đây là bản đầu tiên của Palat Music Player Audio nếu có xảy ra lỗi trong quá trình sử dụng xin hãy báo về contact@palat.io.vn - Cảm ơn bạn <br> Phiên bản này gồm có:<p>Tải nhạc từ Youtube, Xếp nhạc, Chia sẻ nhạc,..</p></p>
-<script>
-const value = window.location.href;
 
-if(value=="https://dev.palat.io.vn/app/id/8955/appinstall.html?1.2.0.0"){
-	document.getElementById("demo").innerHTML = 
-"Đây là bản đầu tiên của Palat Music Player Audio nếu có xảy ra lỗi trong quá trình sử dụng xin hãy báo về contact@palat.io.vn - Cảm ơn bạn <br> Phiên bản này gồm có:<p>Tải nhạc từ Youtube, Xếp nhạc, Chia sẻ nhạc,..</p>"
-}
-else if(value=="https://dev.palat.io.vn/app/id/8955/appinstall.html?(Test)1.0.6.0"){
-document.getElementById("demo").innerHTML = 
-"Đây là thử nghiệm bản đầu tiên của Palat Music Player Audio.</p>"
-}
-</script>
+  <div class="version-container">
+    <div class="version-title">Phiên bản phần mềm:</div>
+    <div class="version-number" id="versionDisplay">Đang tải...</div>
+    <div class="note">Đây là bản đầu tiên của Palat Music Player Audio nếu có xảy ra lỗi trong quá trình sử dụng xin hãy báo về https://forms.gle/H94hmuCk8Px1RUzN7 - Cảm ơn bạn <br> Phiên bản này gồm có:<p>Tải nhạc từ Youtube, Xếp nhạc, Chia sẻ nhạc,..</p></div>
+  </div>
+
+  <script>
+    // Lấy query string sau dấu ?
+    const version = decodeURIComponent(window.location.search.substring(1));
+    const display = document.getElementById("versionDisplay");
+    if (version) {
+      display.textContent = version;
+    } else {
+      display.textContent = "Không xác định";
+    }
+  </script>
 
 </body>
 </html>
-
