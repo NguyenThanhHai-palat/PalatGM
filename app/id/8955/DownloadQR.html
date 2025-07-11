@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quét QR để tải nhạc</title>
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+  <style>
+    body {
+      font-family: Arial;
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    #reader {
+      width: 300px;
+      margin: auto;
+    }
+    #result {
+      margin-top: 20px;
+    }
+    a.download-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 16px;
+      background: #579a62;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="reader"></div>
+  <div id="result">
+    <p id="qr-result">Đang chờ quét mã QR...</p>
+  </div>
+
+  <script>
+    function onScanSuccess(decodedText, decodedResult) {
+      if (!decodedText.startsWith("https://dnc-svc.palat.io.vn/music-get/")) {
+        document.getElementById("qr-result").innerText = "QR không hợp lệ.";
+        return;
+      }
+      document.getElementById("qr-result").innerHTML = `
+        Đã xử lý xong!<br>
+        <a class="download-link" href="${decodedText}" download>Tải về</a>
+      `;
+      html5QrcodeScanner.clear();
+    }
+
+    const html5QrcodeScanner = new Html5QrcodeScanner(
+      "reader", { fps: 10, qrbox: 250 });
+    html5QrcodeScanner.render(onScanSuccess);
+  </script>
+
+</body>
+</html>
