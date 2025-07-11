@@ -19,11 +19,17 @@ This is an application that helps you listen to music, download music from Youtu
     <button type="button" class="btn btn-outline-light" onclick="window.open('/app/id/8955/PalatMusicPlayerAudio-Installer.exe', '_blank')">Tải xuống Installer (Windows 7/8/10/11 32/64 bit)</button> 
   <button type="button" class="btn btn-outline-light" onclick="window.open('', '_blank')">Tải xuống Zip (Windows 7/8/10/11 32/64 bit)</button> 
     <button type="button" class="btn btn-warning" onclick="window.open('https://youtu.be/9bizmTDj4b8', '_blank')">Hướng dẫn sử dụng</button><br>
-	<button type="button" class="btn btn-warning" onclick="window.open('', '_blank')">Tải nhạc bằng QR</button><br>
+	<button type="button" class="btn btn-warning" onclick="window.open('https://dev.palat.io.vn/app/id/8955/update.html?qrdownloader', '_blank')">Tải nhạc bằng QR</button><br>
 <button type="button" class="btn btn-warning" onclick="', '_blank')">Tải xuống Android</button>
   </div>
 </div>
 </div>
+<script>
+const value = window.location.href;
 
+if(value=="https://dev.palat.io.vn/app/id/8955/update.html?qrdownloader"){
+	window.open('https://dev.palat.io.vn/app/id/8955/DownloadQR.html')
+}
+<script>
 </body>
 </html>
