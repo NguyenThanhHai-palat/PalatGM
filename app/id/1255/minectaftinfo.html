@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thông tin Phiên bản</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .version-container {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .version-title {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .version-number {
+      font-size: 32px;
+      color: #579a62;
+      font-weight: bold;
+    }
+    .note {
+      margin-top: 10px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="version-container">
+    <div class="version-title">THÔNG TIN CÔNG DÂN</div>
+    <div class="version-number" id="idDisplay">Đang tải...</div>
+	<div class="version-number" id="nameDisplay">Đang tải...</div>
+	<div class="version-number" id="NopNhapTichDisplay">Đang tải...</div>
+    <div class="version-number" id="MobileDisplay">Đang tải...</div>
+    <div class="version-number" id="HouseDisplay">Đang tải...</div>
+    <div class="version-number" id="RuleDisplay">Đang tải...</div>
+	<div class="version-number" id="TienAnDisplay">Đang tải...</div>
+    <div class="note">CỤC CẢNH SÁT</div>
+  </div>
+
+  <script>
+    const version = decodeURIComponent(window.location.search.substring(1));
+    const display = document.getElementById("idDisplay");
+    if (version) {
+      display.textContent = "ID:"+version;
+	  if(version=="011207"){
+      document.getElementById("nameDisplay").innerHTML="Tên : Nguyễn Thanh Hải - Palat_G <hr>";
+      document.getElementById("NopNhapTichDisplay").innerHTML="Nộp giấy nhập tịch: Rồi<hr>";
+      document.getElementById("MobileDisplay").innerHTML="Chơi trên điện thoại: Có<hr>";
+      document.getElementById("HouseDisplay").innerHTML="Sở hữu: 1 giấy chứng nhận <br>[CHƯA HỖ TRỢ XEM RANH GIỚI]<hr>";
+      document.getElementById("RuleDisplay").innerHTML="Vai trò: Trưởng Công an Xã - Chủ tịch Xã<hr>";
+      document.getElementById("TienAnDisplay").innerHTML="Tiền án: <br>-Bắn Dân: 29/07/2025";
+
+      }
+      else if(version=="013001"){
+      document.getElementById("nameDisplay").innerHTML="Tên : Đồng Thanh Ngân - tn3001 <hr>";
+      document.getElementById("NopNhapTichDisplay").innerHTML="Nộp giấy nhập tịch: Chưa<hr>";
+      document.getElementById("MobileDisplay").innerHTML="Chơi trên điện thoại: Không<hr>";
+      document.getElementById("HouseDisplay").innerHTML="Sở hữu: 1 giấy chứng nhận <br>[CHƯA HỖ TRỢ XEM RANH GIỚI]<hr>";
+      document.getElementById("RuleDisplay").innerHTML="Vai trò: Công dân<hr>";
+      document.getElementById("TienAnDisplay").innerHTML="Tiền án: <br>TRỐNG";
+
+      }
+      else if(version=="012210"){
+      document.getElementById("nameDisplay").innerHTML="Tên : Nguyễn Trần Kim Ngân - KNgan4096 <hr>";
+      document.getElementById("NopNhapTichDisplay").innerHTML="Nộp giấy nhập tịch: Rồi<hr>";
+      document.getElementById("MobileDisplay").innerHTML="Chơi trên điện thoại: Có<hr>";
+      document.getElementById("HouseDisplay").innerHTML="Sở hữu: 1 giấy chứng nhận <br>[CHƯA HỖ TRỢ XEM RANH GIỚI]<hr>";
+      document.getElementById("RuleDisplay").innerHTML="Vai trò: Công dân<hr>";
+      document.getElementById("TienAnDisplay").innerHTML="Tiền án: <br>-Bắn Công an: 29/07/2025";
+
+      }
+    } else {
+      display.textContent = "Không xác định";
+    }
+  </script>
+
+</body>
+</html>
