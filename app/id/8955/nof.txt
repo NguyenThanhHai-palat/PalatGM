@@ -1,5 +1,8 @@
-Bản cập nhật 1.2.0.0 - hiện có lỗi không tải được nhạc từ youtube chúng tôi sẽ sớm có bản khắc phục sự cố này 
-                                                Trân trọng./.
+VIE : Bản cập nhật 1.2.0.0 - hiện có lỗi không tải được nhạc từ youtube, nếu bạn nhấn tải mà không hiện file, xin hãy "cấp quyền chạy với quyền quản trị" khi chạy phần mềm, đây chỉ là giải pháp tạm thời, chúng tôi sẽ sớm đưa ra bản cập nhật mới nhất
+ENG: Update 1.2.0.0 - Currently, there is an issue where music cannot be downloaded from YouTube. If you click the download button and no file appears, please "Run as administrator" when launching the software. This is a temporary solution, and we will release a new update soon.
+JPN:更新版 1.2.0.0 - 現在、YouTubeから音楽をダウンロードできない不具合があります。ダウンロードボタンをクリックしてもファイルが表示されない場合、ソフトウェアを起動する際に「管理者権限で実行してください」とお願い致します。これは一時的な解決策であり、近日中に新しいアップデートをリリース予定です。
+RUS:Обновление 1.2.0.0 - В данный момент существует проблема, из-за которой невозможно загрузить музыку с YouTube. Если вы нажали кнопку загрузки, но файл не появился, пожалуйста, "запустите с правами администратора" при запуске программы. Это временное решение, и мы скоро выпустим новое обновление.
+                                                Trân trọng./. (Best regards , よろしくお願(ねがい)います。 , С уважением)
 
-thông báo ngày: 08/09/2025 1:50:20 (UTC +7)
+thông báo ngày: 24/09/2025 1:14:20 AM (UTC +7) (DD/MM/YY)
 liên hệ gấp: contact@palat.io.vn
